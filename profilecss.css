@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.tools {
+    display: flex;
+}
+
+.tools a {
+    color: #fff;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    z-index: 1001; /* Higher z-index */
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 20px;
+}
+
+.toggle-btn:hover {
+    background-color: #555;
+}
+
+
+.sidepanel {
+    background-color: #333;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: left 0.3s ease-in-out;
+    width: 200px;
+}
+
+.sidepanel ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidepanel li {
+    padding: 10px 0;
+}
+
+.sidepanel li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.customer-info {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.customer-info form {
+    margin-bottom: 20px;
+}
+
+.info-box {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.call-box {
+    background-color: #f5f5f5;
+    flex: 1;
+    padding: 20px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.options button {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.horizontal-list {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.horizontal-list a {
+    color: #333;
+    text-decoration: none;
+}
