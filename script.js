@@ -1,14 +1,20 @@
 function toggleSidePanel() {
     var panel = document.getElementById("sidepanel");
+    var tglbtn = document.getElementById("toggle-btn");
     // Check if the side panel is already open
     if (panel.style.left === "0px") {
         // It's open, so close it by moving it out of view
         panel.style.left = "-250px"; // Adjust "-250px" based on your side panel's width
+        tglbtn.style.left = "0px";
     } else {
         // It's closed, so open it by moving it into view
         panel.style.left = "0px";
+        tglbtn.style.left = "200px"; 
     }
+    
 }
+
+
 
 
 
@@ -24,4 +30,8 @@ function fetchCustomerInfo() {
         }
     };
     xhr.send('customer_id=' + customer_id);
+}
+
+function fetchCallHistory(){
+    
 }
