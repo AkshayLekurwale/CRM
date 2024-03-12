@@ -2,12 +2,13 @@
 <html>
 <head>
     <title>Navbar with Side Panel</title>
-    <link rel="stylesheet" type="text/css" href="profilecss.css">
+    <link rel="stylesheet" type = "text/css" href= "profilecss.css" >
+    
 </head>
 <body>
     <div class="navbar">
         <div class="logo">
-            <img src="logo.jpg" alt="Logo">
+            <img  src="logo.jpg" alt="Logo">
         </div>
         <div class="tools">
             <a href="#">Mail</a>
@@ -52,13 +53,14 @@
         <li><a href="#">  Complaint</a></li>
         </ul>
     </div>
-    <div id="main" class="main-content">
+    <div class="main-content">
         <div class="flex-container">
             <div class="customer-info">
                 <form id="customer-form">
                     <label for="customer_id">Enter Mobile no.</label>
                     <input type="text" id="customer_id" name="customer_id" required>
                     <input type="button" id='getInfoBtn' value="Submit" onclick="fetchCustomerInfo()">
+                    <input type="button" id='getProfile' value="Profile" onclick="ProfileInfo()">
                 </form>
                 <div id="customer-details" class="info-box"></div>
             </div>
@@ -79,18 +81,25 @@
             </div>
         </div>
         <div class="horizontal-list">
-            <button onclick="fetchBGL()">BGL List</button>
+            <button onclick="fetchBGL()">BGL</button>
             <button onclick="fetchPenalty()">Penalty</button>
-            <button onclick="fetchEnquiry()">New Enquiry History</button>
-            <button onclick="fetchComplaintHistory()">New Complaint History</button>
+            <button onclick="fetchEnquiry()">Enquiry History</button>
+            <button onclick="fetchComplaintHistory()">Complaint History</button>
             <button onclick="fetchActivationHistory()">Activation History</button>
             <button onclick="fetchWorkHistory()">Work History</button>
-            <button onclick="fetchCallHistory()">Calls History</button>
+            <!--<input type="button" onclick="fetchCallHistory()">Calls History</input> -->
         </div>
-    </div>
-    <div id="customer-history"></div>
-    
-    <script src="script.js"></script>
 
+       
+    </div>
+   
+    <div id="customer-history"></div>
+    <script>
+        function ProfileInfo() {
+            var customer_id = document.getElementById('customer_id').value;
+            window.location.href = 'originalprofile.php?customer_id=' + customer_id;
+        }
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>

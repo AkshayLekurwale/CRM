@@ -1,3 +1,8 @@
+// function ProfileInfo() {
+//     var customer_id = document.getElementById('customer_id').value;
+//     window.location.href = 'originalprofile.php?customer_id=' + customer_id;
+// }
+
 function toggleSidePanel() {
     var panel = document.getElementById("sidepanel");
     var tglbtn = document.getElementById("toggle-btn");
@@ -15,14 +20,10 @@ function toggleSidePanel() {
 }
 
 
-
-
-
-
 function fetchCustomerInfo() {
     var customer_id = document.getElementById('customer_id').value;
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'fetch_customer_info.php', true);
+    xhr.open('POST', 'fetch_customer_info.php?action=dashboard_info', true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
@@ -32,6 +33,20 @@ function fetchCustomerInfo() {
     xhr.send('customer_id=' + customer_id);
 }
 
-function fetchCallHistory(){
+// function fetchCallHistory(){
+//     var CH = 'CH';
+//     var customer_id = document.getElementById('customer_id').value;
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('POST', 'fetch_customer_info.php?action=fetchCallHistory', true);
     
-}
+//     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+//     xhr.onreadystatechange = function() {
+//         if (xhr.readyState == 4 && xhr.status == 200) {
+//             document.getElementById('customer-details').innerHTML = xhr.responseText;
+//         }
+//     };
+//     xhr.send('customer_id=' + customer_id);
+    // xhr.send('customer_id=' + encodeURIComponent(customer_id)+'CH='+encodeURIComponent(CH));
+
+
+//}
